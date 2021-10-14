@@ -18,7 +18,7 @@ public class CSVWritable implements Writable {
 
     }
 
-    public static read(DataInput dataInput) throws IOException {
+    public static CSVWritable read(DataInput dataInput) throws IOException {
         CSVWritable csvWritable = new CSVWritable();
         csvWritable.readFields(dataInput);
         return csvWritable;
