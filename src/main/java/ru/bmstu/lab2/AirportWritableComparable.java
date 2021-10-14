@@ -14,6 +14,10 @@ public class AirportWritableComparable implements WritableComparable {
         this.indicator = indicator;
     }
 
+    public int getAirportID() {
+        return airportID;
+    }
+
     @Override
     public int compareTo(Object o) {
         if (airportID != ((AirportWritableComparable) o).airportID)
