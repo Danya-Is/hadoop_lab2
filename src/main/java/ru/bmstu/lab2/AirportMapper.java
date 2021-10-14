@@ -16,7 +16,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
         String[] airportFeatures = value.toString().split("\",\"");
         int airportID = Integer.parseInt(airportFeatures[AIRPORT_ID_POS].replaceAll("\"", ""));
-        String airportName = airportFeatures[AIRPORT_NAME_POS];
+        String airportName = airportFeatures[AIRPORT_NAME_POS].replaceAll("\"", "");
         context.write(new AirportWritableComparable(airportID, INDICATOR), new Text(airportName));
     }
 }
