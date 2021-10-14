@@ -9,6 +9,6 @@ public class JoinApp {
         Job job = Job.getInstance();
         job.setJarByClass(JoinApp.class);
         job.setJobName("Join App");
-        FileInputFormat.addInputPath(job, new Path("IdeasProject"));
+        FileInputFormat.addInputPath(job, new Path("IdeaProjects/"));
     }
 }
