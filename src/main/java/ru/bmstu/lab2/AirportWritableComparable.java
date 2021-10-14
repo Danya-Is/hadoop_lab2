@@ -11,14 +11,14 @@ public class AirportWritableComparable implements WritableComparable {
 
     @Override
     public int compareTo(Object o) {
-        if (o == null || getClass() != o.getClass())
-            return 1;
-        return ;
+        if (airportID != ((AirportWritableComparable) o).airportID)
+            return Integer.compare(airportID, ((AirportWritableComparable)o).airportID);
+        return Integer.compare(indicator, ((AirportWritableComparable)o).indicator);
     }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-
+        dataOutput.write();
     }
 
     @Override
