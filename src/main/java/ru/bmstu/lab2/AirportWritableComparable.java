@@ -7,10 +7,12 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AirportWritableComparable implements WritableComparable {
-    private int 
+    private int indicator, airportID;
 
     @Override
     public int compareTo(Object o) {
+        if (o == null || getClass() != o.getClass())
+            return false;
         return 0;
     }
 
