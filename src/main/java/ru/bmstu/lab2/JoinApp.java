@@ -1,4 +1,4 @@
-package main.java.ru.bmstu.lab2;
+package ru.bmstu.lab2;
 
 
 import org.apache.hadoop.mapreduce.Job;
