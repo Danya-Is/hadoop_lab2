@@ -12,8 +12,8 @@ public class AirportWritableComparable implements WritableComparable {
     @Override
     public int compareTo(Object o) {
         if (o == null || getClass() != o.getClass())
-            return false;
-        return 0;
+            return 1;
+        return ;
     }
 
     @Override
