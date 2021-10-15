@@ -1,0 +1,7 @@
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/AirportWritableComparable.java
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/FlightMapper.java
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/GroupingComparator.java
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/AirportPartitioner.java
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/AirportMapper.java
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/AirportReducer.java
+/home/daria-ismagilova/IdeaProjects/hadoop_lab2/src/main/java/ru/bmstu/lab2/JoinApp.java
