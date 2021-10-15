@@ -17,8 +17,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, AirportWritableComp
         if (key.get() > 0) {
             int airportID = Integer.parseInt(airportFeatures[AIRPORT_ID_POS]);
             String airportDelay = airportFeatures[AIRPORT_DELAY_POS];
-            float airportDelayValue = Float.parseFloat(airportDelay);
-            if (!airportDelay.isEmpty() && airportDelayValue > 0f)
+            if (!airportDelay.isEmpty() && Float.parseFloat(airportDelay) > 0f)
                 context.write(new AirportWritableComparable(airportID, INDICATOR), new Text(airportDelay));
         }
     }
