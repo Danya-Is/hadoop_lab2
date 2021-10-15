@@ -26,7 +26,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             }
             float averageDelay = sum / count;
             if (count > 0)
-                context.write(airportName, new Text("Average delay is " + averageDelay + " minutes\n" +
+                context.write(airportName, new Text("\nAverage delay is " + averageDelay + " minutes\n" +
                         "Minimum delay is " + minDelay + " minutes\n" +
                         "Maximum delay is " + maxDelay + " minutes\n"));
         }
