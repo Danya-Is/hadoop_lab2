@@ -8,8 +8,8 @@ import java.io.IOException;
 
 public class AirportWritableComparable implements WritableComparable {
     private int indicator, airportID;
-    
-    AirportWritableComparable() {}
+
+    public AirportWritableComparable() {}
 
     public AirportWritableComparable(int airportID, int indicator) {
         this.airportID = airportID;
