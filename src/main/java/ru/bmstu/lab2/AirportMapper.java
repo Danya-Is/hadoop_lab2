@@ -14,15 +14,15 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     public static int INDICATOR = 0;
 
     public String removeQuote(String s) {
-        return s.replaceAll()
+        return s.replaceAll("\"", "");
     }
 
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, AirportWritableComparable, Text>.Context context) throws IOException, InterruptedException {
         String[] airportFeatures = value.toString().split(DELIMITER);
         if (key.get() > 0) {
-            int airportID = Integer.parseInt(airportFeatures[AIRPORT_ID_POS]);
-            String airportName = airportFeatures[AIRPORT_NAME_POS].replaceAll("\"", "");
+            int airportID = Integer.parseInt(removeQuote(airportFeatures[AIRPORT_ID_POS]));
+            String airportName = removeQuote(airportFeatures[AIRPORT_NAME_POS]);
             context.write(new AirportWritableComparable(airportID, INDICATOR), new Text(airportName));
         }
     }
